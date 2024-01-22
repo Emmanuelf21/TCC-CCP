@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial</title>
+
+    <link rel="stylesheet" href="Style/estilo.css">
+
+</head>
+
+<body>
+    <header>
+        <button class="header style-change" onclick="window.location.href='tutorial.html'">Tutorial</button>
+        <button class="header style-change" onclick="window.location.href='index.html'">Mapa</button>
+        <button class="header style-change" onclick="window.location.href='Sobre.html'">Sobre</button>
+        <div class="dropdown" id="configDropdown">
+          <button class="arrow style-change" onclick="toggleDropdown()">Configuração</button>
+          <div class="dropdown-content">
+            <!-- Example options -->
+            <p style="margin-left: 10px;" class="header style-change">Fontes</p>
+            <button href="#" class="stylesbtn style-change" value=0>Fonte 1</button>
+            <button href="#" class="stylesbtn style-change" value=1>Fonte 2</button>
+            <button href="#" class="stylesbtn style-change" value=2 >Fonte 3</button>
+            <p style="margin-left: 10px;" class="header style-change">Tamanho da fonte</p>
+            <button href="#" class="stylesbtn style-change" value=3>Tamanho 1</button>
+            <button href="#" class="stylesbtn style-change" value=4>Tamanho 2</button>
+            <button href="#" class="stylesbtn style-change" value=5 >Tamanho 3</button>
+          </div>
+        </div>
+      </header>
+      <div class="container-tutorial">
+        <div class="video">
+            <iframe
+        width="100%"
+        height="500"
+        src=""
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen
+      ></iframe>
+        </div>
+
+        <div class="container-icons">
+            <div class="title-icons">Cores dos icones</div>
+            <div class="colors-icons">
+            <div class="container-icons-columns">
+                <div class="icons-subtitles">
+                    <div class="color" style="background-color: #ffea00;"></div>
+                    <p class="subtitle style-change ">Atração</p>
+                </div>
+                <div class="icons-subtitles">
+                    <div class="color" style="background-color: rgb(128, 126, 126);"></div>
+                    <p class="subtitle style-change">Empresa</p>
+                </div>
+                <div class="icons-subtitles">
+                    <div class="color" style="background-color: #0062ff;"></div>
+                    <p class="subtitle style-change">Compras</p>
+                </div>
+                <div class="icons-subtitles">
+                    <div class="color" style="background-color: #fcaa1d;"></div>
+                    <p class="subtitle style-change">Alimentos e Bebidas</p>
+                </div>
+                <div class="icons-subtitles">
+                    <div class="color" style="background-color: #ae00ff;"></div>
+                    <p class="subtitle style-change">Posto de Gasolina</p>
+                </div>
+            </div>
+            <div class="container-icons-columns">
+                <div class="icons-subtitles">
+                    <div class="color" style="background-color: rgb(128, 126, 126);"></div>
+                    <p class="subtitle style-change">Aluguel de Carros</p>
+                </div>
+                <div class="icons-subtitles">
+                    <div class="color" style="background-color: #ff00a2;"></div>
+                    <p class="subtitle style-change">Hospedagem</p>
+                </div>
+                <div class="icons-subtitles">
+                    <div class="color" style="background-color: rgb(128, 126, 126);"></div>
+                    <p class="subtitle style-change">Governo</p>
+                </div>
+                <div class="icons-subtitles">
+                    <div class="color" style="background-color: #ff0000;"></div>
+                    <p class="subtitle style-change">Saúde</p>
+                </div>
+                <div class="icons-subtitles">
+                    <div class="color" style="background-color: #107e02;"></div>
+                    <p class="subtitle style-change">Parque</p>
+                </div>
+            </div>
+            <div class="container-icons-columns">
+                <div class="icons-subtitles">
+                    <div class="color" style="background-color: #013b98;"></div>
+                    <p class="subtitle style-change">Local de Adoração (igrejas, centros, etc...)</p>
+                </div>
+                <div class="icons-subtitles">
+                    <div class="color" style="background-color: #04cd36;"></div>
+                    <p class="subtitle style-change">Escola</p>
+                </div>
+                <div class="icons-subtitles">
+                    <div class="color" style="background-color: rgb(128, 126, 126);"></div>
+                    <p class="subtitle style-change">Ginásio poliesportivo</p>
+                </div>
+            </div>
+            </div>
+        </div>
+        </div>
+    <script src="JS/fontStyleChange.js"></script>
+    <script src="JS/dropdownScript.js"></script>
+</body>

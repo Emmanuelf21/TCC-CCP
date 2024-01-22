@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre</title>
+
+    <link rel="stylesheet" href="Style/estilo.css">
+    
+</head>
+<body>
+    <header>
+        <button class="header style-change" onclick="window.location.href='tutorial.html'">Tutorial</button>
+        <button class="header style-change" onclick="window.location.href='index.html'">Mapa</button>
+        <button class="header style-change" onclick="window.location.href='Sobre.html'">Sobre</button>
+        <div class="dropdown" id="configDropdown">
+          <button class="arrow style-change" onclick="toggleDropdown()">Configuração</button>
+          <div class="dropdown-content">
+            <!-- Example options -->
+            <p style="margin-left: 10px;" class="header style-change">Fontes</p>
+            <button href="#" class="stylesbtn style-change" value=0>Fonte 1</button>
+            <button href="#" class="stylesbtn style-change" value=1>Fonte 2</button>
+            <button href="#" class="stylesbtn style-change" value=2 >Fonte 3</button>
+            <p style="margin-left: 10px;" class="header style-change">Tamanho da fonte</p>
+            <button href="#" class="stylesbtn style-change" value=3>Tamanho 1</button>
+            <button href="#" class="stylesbtn style-change" value=4>Tamanho 2</button>
+            <button href="#" class="stylesbtn style-change" value=5 >Tamanho 3</button>
+          </div>
+        </div>
+    </header>
+    <div class="container-sobre">
+      <h2 class="sobre-title">Sobre o site</h2>
+      <p class="style-change sobre-text">Com o rápido crescimento da tecnologia e a crescente presença da Internet na vida de todos, quem não cresceu nesse meio possui dificuldades para se adaptar à tecnologia, com isso, nosso grupo decidiu por criar um site acessível para essas pessoas, que fazem parte, principalmente, da terceira idade, com algumas configurações predefinidas de fonte e tamanho das letras, que podem ser alteradas pelo usuário de forma prática e fácil, além de três estilos de mapa, tudo isso no botão de configuração.</p>
+      <img src="Images/homepage.PNG" class="img" alt="Página inicial">
+      <p class="style-change sobre-text">Nossa ideia com o mapa é de buscar lugares que possam ser de interesse, para isso utilizamos a API (biblioteca) do google maps para criar o mapa. O mapa possui alguns filtros e outros estilos de visualização, como o google street view para visualizar as ruas e o mapa por satélite.</p>
+      <p class="style-change sobre-text">Para auxiliar na utilização do site, criamos uma página de tutorial com as cores dos ícones que aparecem no mapa e um vídeo de tutorial explicando melhor como utilizar o site. Também foi elaborado uma pesquisa sobre cores de contraste para melhor visualização dos elementos no site.</p>
+      <p class="style-change sobre-text">Se tiver algo que podemos melhorar, envie uma mensagem:</p>
+      <form action="https://api.staticforms.xyz/submit" method="POST" class="formulario">
+        <div class="input-box">
+          <input type="text" name="name" class="style-change user" id="nome" required/>
+          <label for="name" class="label-input style-change">Nome</label>
+        </div>
+        <textarea name="message" id="message" class="style-change" cols="30" rows="10" placeholder="Escreva sua mensagem aqui!"></textarea>
+        <input type="hidden" name="_captcha" value="false" />
+        <input type="hidden" name="accessKey" value="76353a59-b85d-4f3d-8442-f381046c4a44">
+        <input type="hidden" name="redirectTo" value="http://127.0.0.1:5500/Projeto/Sobre.html">
+        <input type="submit" class="stylesbtn subButton style-change" value="Enviar">
+      </form>
+    </div>
+    <script src="JS/fontStyleChange.js"></script>
+    <script src="JS/dropdownScript.js"></script>
+</body>
+</html>

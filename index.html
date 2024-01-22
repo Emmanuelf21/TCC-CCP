@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seu Mapa acessível</title>
+
+  <link rel="stylesheet" href="Style/estilo.css">
+  
+</head>
+
+<body>
+  <header>
+    <button class="header style-change" onclick="window.location.href='tutorial.html'">Tutorial</button>
+    <button class="header style-change" onclick="window.location.href='index.html'">Mapa</button>
+    <button class="header style-change" onclick="window.location.href='Sobre.html'">Sobre</button>
+    <div class="dropdown" id="configDropdown">
+      <button class="arrow style-change" onclick="toggleDropdown()">Configuração</button>
+      <div class="dropdown-content">
+        <!-- Example options -->
+        <p style="margin-left: 10px;" class="header style-change">Fontes</p>
+        <button href="#" class="stylesbtn style-change" value=0>Fonte 1</button>
+        <button href="#" class="stylesbtn style-change" value=1>Fonte 2</button>
+        <button href="#" class="stylesbtn style-change" value=2 >Fonte 3</button>
+        <p style="margin-left: 10px;" class="header style-change">Tamanho da fonte</p>
+        <button href="#" class="stylesbtn style-change" value=3>Tamanho 1</button>
+        <button href="#" class="stylesbtn style-change" value=4>Tamanho 2</button>
+        <button href="#" class="stylesbtn style-change" value=5 >Tamanho 3</button>
+        <p style="margin-left: 10px;" class="header style-change">Mapas</p>
+        <button href="#" class="mapas mapStyle style-change" id="map-id-change" value=0>Mapa 1</button>
+        <button href="#" class="mapas mapStyle style-change" id="map-id-change" value=1>Mapa 2</button>
+        <button href="#" class="mapas  mapStyle style-change" id="map-id-change" value=2>Mapa 3</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Autocomplete section -->
+  <div class="autocomplete-section " style="display: none;">
+    <div class="pac-card style-change" id="pac-card">
+      <input id="pac-input" type="text" class="style-change-pac-input style-change" placeholder="Insira a localização" />
+      <div class="form-group pac-controls style-change" style="font-family: Arial;">
+        <label for="tipo" >Selecione o Tipo do Local:</label>
+        <select class="form-control style-change" name="" id="tipo">
+          <option value="gym">Academia</option>
+          <option value="liquor_store">Adega</option>
+          <option value="lawyer">Advogado</option>
+          <option value="real_estate_agency">Agência Imobiliária</option>
+          <option value="insurance_agency">Agência de Seguros</option>
+          <option value="travel_agency">Agência de Viagens</option>
+          <option value="airport">Aeroporto</option>
+          <option value="lodging">Alojamento</option>
+          <option value="car_rental">Aluguel de Carros</option>
+          <option value="aquarium">Aquario</option>
+          <option value="campground">Área de Camping</option>
+          <option value="storage">Armazem</option>
+          <option value="atm">ATM</option>
+          <option value="tourist_attraction">Atração Turisctica</option>
+          <option value="night_club">Balada</option>
+          <option value="bank">Banco</option>
+          <option value="bar">Bar</option>
+          <option value="library">Biblioteca</option>
+          <option value="bicycle_store">Bicicletaria</option>
+          <option value="bowling_alley">Boliche</option>
+          <option value="fire_station">Bombeiros</option>
+          <option value="hair_care">Cabeleireiro</option>
+          <option value="cafe">Café</option>
+          <option value="casino">Casino</option>
+          <option value="cemetery">Cemitério</option>
+          <option value="locksmith">Chaveiro</option>
+          <option value="movie_theater">Cinema</option>
+          <option value="meal_takeaway">Comida para Viagem</option>
+          <option value="car_dealer">Concessionária</option>
+          <option value="accounting">Contabilidade</option>
+          <option value="post_office">Correios</option>
+          <option value="dentist">Dentista</option>
+          <option value="drugstore">Drogaria</option>
+          <option value="electrician">Eletricista</option>
+          <option value="embassy">Embaixada</option>
+          <option value="roofing_contractor">Empreitaria</option>
+          <option value="plumber">Encanador</option>
+          <option value="meal_delivery">Entrega de Comida</option>
+          <option value="school">Escola</option>
+          <option value="primary_school">Escola Primária</option>
+          <option value="secondary_school">Ensino Médio (Ensino Médio)</option>
+          <option value="local_government_office">
+            Escritório Governamental Local
+          </option>
+          <option value="bus_station">Estação de Ônibus</option>
+          <option value="train_station">Estação de Trem</option>
+          <option value="transit_station">Estação de Transito</option>
+          <option value="subway_station">Estação do Mêtro</option>
+          <option value="parking">Estacionamento</option>
+          <option value="rv_park">Estacionamento para Trailers</option>
+          <option value="stadium">Estádio</option>
+          <option value="university">Faculdade</option>
+          <option value="pharmacy">Farmacia</option>
+          <option value="physiotherapist">Fisioterapeuta</option>
+          <option value="florist">Floricultura</option>
+          <option value="funeral_home">Funerária</option>
+          <option value="art_gallery">Galeria de Arte</option>
+          <option value="hospital">Hospital</option>
+          <option value="church">Igreja</option>
+          <option value="jewelry_store">Joalheria</option>
+          <option value="car_wash">Lava-rápido</option>
+          <option value="laundry">Lavanderia</option>
+          <option value="book_store">Livraria</option>
+          <option value="movie_rental">Locadora</option>
+          <option value="home_goods_store">Loja de Artigos Domésticos</option>
+          <option value="convenience_store">Loja de Conveniência</option>
+          <option value="department_store">Loja de Departamento</option>
+          <option value="electronics_store">Loja de Eletrônicos</option>
+          <option value="hardware_store">Loja de Ferragens</option>
+          <option value="furniture_store">Loja de Móveis</option>
+          <option value="clothing_store">Loja de Roupas</option>
+          <option value="shoe_store">Loja de Sapatos</option>
+          <option value="store">Lojas</option>
+          <option value="doctor">Médicos</option>
+          <option value="mosque">Mesquita</option>
+          <option value="museum">Museu</option>
+          <option value="bakery">Padaria</option>
+          <option value="park">Parque</option>
+          <option value="amusement_park">Parque de Diversões</option>
+          <option value="pet_store">Pet Shop</option>
+          <option value="painter">Pintor</option>
+          <option value="police">Polícia</option>
+          <option value="taxi_stand">Ponto de Taxi</option>
+          <option value="gas_station">Posto de Gasolina</option>
+          <option value="city_hall">Prefeitura</option>
+          <option value="car_repair">Reparo de Carros</option>
+          <option value="restaurant">Restaurante</option>
+          <option value="beauty_salon">Salão de Beleza</option>
+          <option value="shopping_mall">Shopping</option>
+          <option value="synagogue">Sinagoga</option>
+          <option value="spa">Spa</option>
+          <option value="supermarket">Supermercado</option>
+          <option value="hindu_temple">Templo Hindu</option>
+          <option value="courthouse">Tribunal</option>
+          <option value="veterinary_care">Veterinário</option>
+          <option value="zoo">Zoológico</option>
+        </select>
+        
+      </div>
+      <br />
+      <button class="clearBtn header style-change">Limpar</button>
+    </div>
+  </div>
+
+  <div id="map" class="map"></div>
+  <br /><br />
+  <table class="table table-bordered table-hover style-change" id="places"></table>
+  
+  
+  <script type="module" src="JS/script_map.js"></script>
+  <script src="JS/dropdownScript.js"></script>
+   <script src="JS/main.js"></script>
+   <script src="JS/fontStyleChange.js"></script>
+</body>
+
+</html>
